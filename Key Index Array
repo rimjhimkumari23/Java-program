@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        long d=-1;
+        long arr[]=new long[n];
+        for(int i=0;i<n;i++){
+            arr[i]=s.nextLong();
+        }
+        long k=s.nextInt();
+        int f=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]==k){
+                f=1;
+                System.out.print(i);
+            }
+        }
+        if(f==0){
+            System.out.print(d);
+        }
+    }
+}
