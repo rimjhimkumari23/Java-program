@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        long d=-1;
+        long arr1[]=new long[n];
+        long arr2[]=new long[n];
+        for(int i=0;i<n;i++){
+            arr1[i]=s.nextLong();
+        }
+        long m=s.nextInt();
+        for(int i=n-1,k=0;i>=0;i--,k++){
+            arr2[k]=arr1[i];
+        }
+        int f=0;
+        for(int k=0;k<n;k++){
+            if(arr2[k]==m){
+                System.out.print(k+" ");
+                f=1;
+                return;
+            } 
+        }
+        if(f==0){
+            System.out.print(d);
+        } 
+    }
+}
