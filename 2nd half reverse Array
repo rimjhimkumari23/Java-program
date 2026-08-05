@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        long a[]=new long[n];
+        for(int i=0;i<n;i++){
+            a[i]=s.nextLong();
+        } 
+        for(int i=n/2,j=n-1;i<j;i++,j--){
+            long t=a[i];
+            a[i]=a[j];
+            a[j]=t;
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+/*
+12
+1 2 3 4 5 6 7 8 9 10 11 12
+Expected
+1 2 3 4 5 6 12 11 10 9 8 7
