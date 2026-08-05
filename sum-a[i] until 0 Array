@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        long arr1[]=new long[n];
+        long sum=0;
+        for(int i=0;i<n;i++){
+            arr1[i]=s.nextLong();
+        }
+        for(int i=0;i<n;i++){
+              sum=sum+arr1[i];
+        }
+        long p=sum;
+        for(int i=0;i<n;i++){
+              p=p-arr1[i];
+        System.out.print(p+" ");
+        }
+    }
+}
+/*
+12
+1 2 3 4 5 6 7 8 9 10 11 12
+Expected
+77 75 72 68 63 57 50 42 33 23 12 0
+*/
