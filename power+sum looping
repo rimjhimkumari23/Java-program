@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        long n=s.nextLong();
+        while(n!=1&&n!=4){
+        long sum=0;
+        while(n>0){
+          long r=n%10;
+          long p=r*r;
+          sum=sum+p;
+            n=n/10;
+            }
+            n=sum;
+        }
+        if(n==1){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+    }
+}
+/*
+The given number is 19. We perform the following steps:
+    1^2 + 9^2 = 82
+    8^2 + 2^2 = 68
+    6^2 + 8^2 = 100
+    1^2 + 0^2 + 0^2 = 1
+*/
