@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        long n=s.nextLong();
+        long m=s.nextLong();
+        while(m!=0){
+            long temp=m;
+            m=n%m;
+            n=temp;
+        }
+        System.out.print(n);
+        }
+}
