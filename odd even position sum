@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        long n=s.nextLong();
+        long pos=1,ev=0,od=0;
+        while(n>0){
+            long r=n%10;
+            if(pos%2==0){
+                ev=ev+r;
+            }
+            else{
+                od=od+r;
+            }
+            n=n/10;
+            pos++;
+        }
+        System.out.println("Odd Position Sum: " + od);
+        System.out.println("Even Position Sum: " + ev);
+        System.out.println("Difference: " + Math.abs(od - ev));
+    }
+}
+/*
+908172
+Odd Position Sum: 3
+Even Position Sum: 24
+Difference: 21
+*/
