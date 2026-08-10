@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        long n=s.nextLong();
+        long m=s.nextLong();
+        long ca=0;
+        long c=0;
+        while(n>0||m>0){
+            long r=n%10;
+            long p=m%10;
+           long sum=r+p+ca;
+            if(sum>9){
+                ca=1;
+                c++;
+            }
+            n=n/10;
+            m=m/10;
+        }
+        System.out.println("Carry Operations: "+c);
+    }
+}
+/*
+555 555
+Output
+Carry Operations: 3
+*/
