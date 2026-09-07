@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Recursion {
+    void fun(int n){
+        if(n>0){
+            System.out.print(n+" ");
+            fun1(n-1);
+        }
+    }
+    void fun1(int n){
+        if(n>1){
+            System.out.print(n+" ");
+            fun(n/2);
+        }
+    }
+    public static void main(String[] args){
+        int n=20;
+        Recursion r=new Recursion();
+        r.fun(n);
+    }
+}
