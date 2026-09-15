@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Codechef{
+	public static void main (String[] args) throws java.lang.Exception{
+		Scanner s=new Scanner(System.in);
+		int t=s.nextInt();
+		int even=0,odd=0;
+		while(t-->0){
+		    int n=s.nextInt();
+		    if(n%2==0){
+		        even++;
+		    }
+		    else{
+		        odd++;
+		    }
+		}
+		if(even>odd){
+		    System.out.println("READY FOR BATTLE");
+		}
+		else{
+		    System.out.println("NOT READY");
+		}
+	}
+}
