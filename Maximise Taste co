@@ -1,0 +1,32 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Codechef{
+	public static void main (String[] args) throws java.lang.Exception{
+		Scanner s=new Scanner(System.in);
+		int t=s.nextInt();
+		while(t-->0){
+		    int a=s.nextInt();
+		    int b=s.nextInt();
+		    int c=s.nextInt();
+		    int d=s.nextInt();
+		    int max=0;
+		    int x=a+c;
+		    int y=a+d;
+		    int z=b+c;
+		    int z1=b+d;
+		    if(x>y&&x>z&&x>z1){
+		        System.out.println(x);
+		    }
+		    else if(y>z&&y>z1){
+		        System.out.println(y);
+		    }
+		    else if(z>z1){
+		        System.out.println(z);
+		    }
+		    else{
+		        System.out.println(z1);
+		    }
+		}
+	}
+}
